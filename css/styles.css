@@ -1,0 +1,442 @@
+@font-face {
+    font-family: 'TempleOS Font';
+    src: url('font/templeos_font.woff') format('woff'), url('font/templeos_font.ttf') format('truetype'), url('font/templeos_font.otf') format('otf'), url('font/templeos_font.bdf') format('bdf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    box-sizing: border-box;
+    cursor: url('templeos_cursor.png'), auto;
+    font-family: "TempleOS Font", monospace;
+}
+
+html {
+    background: #000;
+    width: 100%;
+    /* height: 100vh; */
+    color: #000;
+    font-size: 62.5%;
+    line-height: 0.95;
+    -webkit-text-size-adjust: 100%;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    font-size: 1.5rem;
+    margin: 0;
+    /* height: 100vh; */
+    background: #0000a8;
+    width: 950px;
+    height: 800px;
+}
+
+body.loaded {
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+h1 {
+    color: #000
+}
+
+h2 {
+    color: #000
+}
+
+h3 {
+    color: #000
+}
+
+a {
+    width: inherit;
+    text-decoration: none;
+    color: #5757ff;
+    font-weight: 900;
+    transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+}
+
+strong {
+    color: #ffff57
+}
+
+a:hover {}
+
+p {
+    font-family: 'TempleOS Font', monospace;
+    margin: 0;
+    font-weight: 900;
+}
+
+
+/* --- GLOBAL NAV --- */
+
+.globalnav {
+    position: relative;
+}
+
+
+/* --- STATUS BAR --- */
+
+.topnav {
+    background-color: #0000a8;
+    overflow: hidden;
+    color: #fff;
+}
+
+.topnav a {
+    float: left;
+    color: #fff;
+    text-align: center;
+    padding-right: 15px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+/* --- DROPDOWN MENU --- */
+
+.ddmenu {
+    display: none;
+    z-index: 1;
+    top: -1px;
+}
+
+.topnav:hover+.ddmenu {
+    display: block;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background: #0000a8;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+}
+
+ul li a {
+    display: block;
+    padding: 0px;
+    color: #ffff57;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #0000a8;
+    background: #ffff57;
+}
+
+ul li ul.dropdown {
+    min-width: 100%;
+    /* Set width of the dropdown */
+    background: #0000a8;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+    /* Display the dropdown */
+}
+
+ul li ul.dropdown li {
+    display: block;
+}
+
+
+/* --- TIMER --- */
+
+#digital-clock {
+    display: flex;
+    color: #fff;
+    font-weight: 900;
+    font-size: 15px;
+    padding-left: 5px;
+}
+
+#time-js {
+    margin-right: 12px;
+}
+
+#today-js {
+    margin-right: 12px;
+}
+
+#month-js {
+    /*margin-right: 12px;*/
+}
+
+#date-js {
+    margin-right: 12px;
+}
+
+
+/* --- BODY WRAP --- */
+
+.main {
+    display: flex;
+    background: #fff;
+    padding: 3px;
+    height: 80%;
+}
+
+.window {
+    background: #fff;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 3px;
+    margin-left: 5px;
+    padding: 5px;
+    flex: 50%;
+    border: 2px solid #0000a8;
+}
+
+.btn {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-color: #0000a8 #fff;
+    scrollbar-width: thin;
+}
+
+#windowControl:checked+label {
+    border: inherit;
+    border: 2px solid #0000a8;
+}
+
+#windowControl {
+    display: none;
+}
+
+.gameBlock {
+    white-space: nowrap;
+}
+
+.gameBlock>div {
+    display: inline-block;
+    margin: 1.8px;
+}
+
+.row {
+    margin-bottom: 65px;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    /* Should be removed. Only for demonstration */
+}
+
+
+/* --- WINDOW BAR --- */
+
+.windowBar {
+    position: relative;
+    display: flex;
+    top: -20px;
+    margin-bottom: -59px;
+}
+
+.windowBarPU {
+    position: relative;
+    display: flex;
+    top: -20px;
+    margin-bottom: -59px;
+    cursor: move;
+}
+
+
+/* --- term --- */
+
+.term {
+    background: #fff;
+    font-weight: 900;
+    color: #0000a8;
+    position: relative;
+    letter-spacing: -4px;
+    padding-bottom: 3px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    width: 13.4px;
+    top: 20px;
+    right: 13px;
+}
+
+.term-popup {
+    background: #fff;
+    font-weight: 900;
+    color: #0000a8;
+    position: relative;
+    letter-spacing: -4px;
+    padding-bottom: 3px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    width: 13.4px;
+    top: 20px;
+    right: 13px;
+    cursor: move;
+}
+
+
+/* --- Menu Button --- */
+
+.menuButton {
+    background: #fff;
+    font-weight: 900;
+    color: #0000a8;
+    height: 25px;
+    line-height: 1.8;
+    left: -14px;
+    position: relative;
+    padding: 1.5px;
+    top: -1px;
+}
+
+.menu-popup {
+    background: #fff;
+    font-weight: 900;
+    color: #0000a8;
+    position: relative;
+    height: 25px;
+    line-height: 1.8;
+    padding: 1.5px;
+    left: -14px;
+    top: -3px;
+    cursor: move;
+}
+
+
+/* --- Text Slider --- */
+
+#title {
+    margin: 1rem 0;
+    width: 30%;
+    overflow: hidden;
+    background: #0000a8;
+    color: #FFFFFF;
+    font-weight: 900;
+    white-space: nowrap;
+    position: relative;
+    top: -4px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    height: 17px;
+    line-height: 1.5;
+}
+
+#title-popup {
+    margin: 1rem 0;
+    width: 30%;
+    overflow: hidden;
+    background: #0000a8;
+    color: #FFFFFF;
+    font-weight: 900;
+    white-space: nowrap;
+    position: relative;
+    top: -4.6px;
+    left: 105px;
+    display: flex;
+    justify-content: center;
+    height: 14px;
+    line-height: 1;
+    cursor: move;
+}
+
+#title-text {
+    animation: scrolling-text 4s linear infinite;
+}
+
+@keyframes scrolling-text {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* --- Close Button --- */
+
+#closeA {
+    padding-bottom: 1px;
+    background: #fff;
+    color: #0000a8;
+    display: flex;
+    justify-content: right;
+    position: relative;
+    width: 28px;
+    top: 8px;
+    left: 236px;
+    height: 16px;
+}
+
+#closeB {
+    padding-bottom: 1px;
+    background: #fff;
+    color: #0000a8;
+    display: flex;
+    justify-content: right;
+    position: relative;
+    width: 28px;
+    top: 8px;
+    left: 243px;
+    height: 16px;
+}
+
+#close-popup {
+    padding-bottom: 1px;
+    background: #fff;
+    color: #0000a8;
+    display: flex;
+    justify-content: right;
+    position: relative;
+    width: 28px;
+    top: 6px;
+    left: 252px;
+    height: 16px;
+}
+
+
+/* --- OUT OF MAIN CONTENT --- */
+
+.bio {
+    color: #fff;
+}
+
+
+/* --- POP UP --- */
+
+#popup-wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    top: 55px;
+    position: relative;
+}
+
+#popup {
+    width: 475px;
+    height: 620px;
+    background: #FFFFFF;
+    border: 6px double #0000a8;
+    position: absolute;
+    cursor: move;
+    padding: 5px;
+    z-index: 1;
+}
