@@ -221,6 +221,15 @@ ul li ul.dropdown li {
     display: none;
 }
 
+#windowControlB:checked+label {
+    border: inherit;
+    border: 2px solid #0000a8;
+}
+
+#windowControlB {
+    display: none;
+}
+
 .gameBlock {
     white-space: nowrap;
 }
@@ -298,12 +307,20 @@ ul li ul.dropdown li {
     background: #fff;
     font-weight: 900;
     color: #0000a8;
-    height: 25px;
-    line-height: 1.8;
+    height: 22px;
+    line-height: 1.9;
     left: -14px;
     position: relative;
     padding: 1.5px;
     top: -1px;
+    -webkit-animation: NAME-YOUR-ANIMATION 1s infinite;
+    /* Safari 4+ */
+    -moz-animation: NAME-YOUR-ANIMATION 1s infinite;
+    /* Fx 5+ */
+    -o-animation: NAME-YOUR-ANIMATION 1s infinite;
+    /* Opera 12+ */
+    animation: NAME-YOUR-ANIMATION 1s infinite;
+    /* IE 10+, Fx 29+ */
 }
 
 .menu-popup {
@@ -311,12 +328,33 @@ ul li ul.dropdown li {
     font-weight: 900;
     color: #0000a8;
     position: relative;
-    height: 25px;
-    line-height: 1.8;
+    height: 12px;
+    line-height: 0.6;
     padding: 1.5px;
     left: -14px;
-    top: -3px;
+    top: 6px;
     cursor: move;
+    -webkit-animation: NAME-YOUR-ANIMATION 1s infinite;
+    /* Safari 4+ */
+    -moz-animation: NAME-YOUR-ANIMATION 1s infinite;
+    /* Fx 5+ */
+    -o-animation: NAME-YOUR-ANIMATION 1s infinite;
+    /* Opera 12+ */
+    animation: NAME-YOUR-ANIMATION 1s infinite;
+    /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes NAME-YOUR-ANIMATION {
+    0%,
+    49% {
+        background-color: #fff;
+        color: #0000a8;
+    }
+    50%,
+    100% {
+        background-color: #0000a8;
+        color: #fff;
+    }
 }
 
 
