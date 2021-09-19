@@ -17,7 +17,6 @@ html {
     /* height: 100vh; */
     color: #000;
     font-size: 62.5%;
-    line-height: 0.95;
     -webkit-text-size-adjust: 100%;
     scrollbar-width: none;
     scroll-behavior: smooth;
@@ -27,7 +26,7 @@ html {
 }
 
 body {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0;
     /* height: 100vh; */
     background: #0000a8;
@@ -56,7 +55,6 @@ a {
     width: inherit;
     text-decoration: none;
     color: #5757ff;
-    font-weight: 900;
     transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
@@ -72,7 +70,6 @@ a:hover {}
 p {
     font-family: 'TempleOS Font', monospace;
     margin: 0;
-    font-weight: 900;
 }
 
 
@@ -163,8 +160,6 @@ ul li ul.dropdown li {
 #digital-clock {
     display: flex;
     color: #fff;
-    font-weight: 900;
-    font-size: 15px;
     padding-left: 5px;
 }
 
@@ -236,7 +231,6 @@ ul li ul.dropdown li {
 
 .gameBlock>div {
     display: inline-block;
-    margin: 1.8px;
 }
 
 .row {
@@ -257,14 +251,14 @@ ul li ul.dropdown li {
     position: relative;
     display: flex;
     top: -20px;
-    margin-bottom: -59px;
+    margin-bottom: -42px;
 }
 
 .windowBarPU {
     position: relative;
     display: flex;
     top: -20px;
-    margin-bottom: -59px;
+    margin-bottom: -45px;
     cursor: move;
 }
 
@@ -273,10 +267,9 @@ ul li ul.dropdown li {
 
 .term {
     background: #fff;
-    font-weight: 900;
     color: #0000a8;
     position: relative;
-    letter-spacing: -4px;
+    letter-spacing: -2px;
     padding-bottom: 3px;
     writing-mode: vertical-rl;
     text-orientation: upright;
@@ -287,10 +280,9 @@ ul li ul.dropdown li {
 
 .term-popup {
     background: #fff;
-    font-weight: 900;
     color: #0000a8;
     position: relative;
-    letter-spacing: -4px;
+    letter-spacing: -2px;
     padding-bottom: 3px;
     writing-mode: vertical-rl;
     text-orientation: upright;
@@ -305,14 +297,13 @@ ul li ul.dropdown li {
 
 .menuButton {
     background: #fff;
-    font-weight: 900;
     color: #0000a8;
-    height: 22px;
-    line-height: 1.9;
+    height: 17px;
+    line-height: 2.1;
     left: -14px;
     position: relative;
     padding: 1.5px;
-    top: -1px;
+    top: 4px;
     -webkit-animation: NAME-YOUR-ANIMATION 1s infinite;
     /* Safari 4+ */
     -moz-animation: NAME-YOUR-ANIMATION 1s infinite;
@@ -325,11 +316,10 @@ ul li ul.dropdown li {
 
 .menu-popup {
     background: #fff;
-    font-weight: 900;
     color: #0000a8;
     position: relative;
     height: 12px;
-    line-height: 0.6;
+    line-height: 1;
     padding: 1.5px;
     left: -14px;
     top: 6px;
@@ -366,7 +356,6 @@ ul li ul.dropdown li {
     overflow: hidden;
     background: #0000a8;
     color: #FFFFFF;
-    font-weight: 900;
     white-space: nowrap;
     position: relative;
     top: -4px;
@@ -374,7 +363,7 @@ ul li ul.dropdown li {
     display: flex;
     justify-content: center;
     height: 17px;
-    line-height: 1.5;
+    line-height: 2;
 }
 
 #title-popup {
@@ -383,7 +372,6 @@ ul li ul.dropdown li {
     overflow: hidden;
     background: #0000a8;
     color: #FFFFFF;
-    font-weight: 900;
     white-space: nowrap;
     position: relative;
     top: -4.6px;
@@ -391,8 +379,8 @@ ul li ul.dropdown li {
     display: flex;
     justify-content: center;
     height: 14px;
-    line-height: 1;
     cursor: move;
+    line-height: 1.4;
 }
 
 #title-text {
@@ -419,8 +407,8 @@ ul li ul.dropdown li {
     justify-content: right;
     position: relative;
     width: 28px;
-    top: 8px;
-    left: 236px;
+    top: 12px;
+    left: 229px;
     height: 16px;
 }
 
@@ -432,8 +420,8 @@ ul li ul.dropdown li {
     justify-content: right;
     position: relative;
     width: 28px;
-    top: 8px;
-    left: 243px;
+    top: 12px;
+    left: 237px;
     height: 16px;
 }
 
@@ -445,8 +433,8 @@ ul li ul.dropdown li {
     justify-content: right;
     position: relative;
     width: 28px;
-    top: 6px;
-    left: 252px;
+    top: 8px;
+    left: 216px;
     height: 16px;
 }
 
@@ -469,8 +457,8 @@ ul li ul.dropdown li {
 }
 
 #popup {
-    width: 475px;
-    height: 620px;
+    width: 435px;
+    height: 585px;
     background: #FFFFFF;
     border: 6px double #0000a8;
     position: absolute;
